@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Change this text via button</h1>
+    <button onclick="changefun()">change</button>
+    <button onclick="changeagain()">Previous text</button>
+</body>
+<script>
+
+let a = document.getElementById("head") 
+
+function changefun(){
+    // console.log(a.innerText)
+    a.innerText = "Hello , How are you ?"
+}
+
+function changeagain(){
+    // console.log(a.innerText)
+    a.innerText = "Change this text via button"
+}
+
+
+</script>
+</html>

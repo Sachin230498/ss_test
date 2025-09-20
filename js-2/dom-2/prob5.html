@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        text-align: center;
+      }
+
+      #main div {
+        /* border: 2px solid; */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      #main img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+  <script>
+    let main = document.getElementById("main");
+
+    // for(let i=1;i<=5;i++){
+    //     let h1 = document.createElement("h1")
+    //     h1.innerText = "hello"
+    //     main.append(h1)
+    // }
+
+    // let name = ["Rahul", "Rohan", "Riya", "Priti", "Kabir","Sameer","Kirti"]
+    // let color = ["green","red", "pink","blue","yellow","skyblue","vilot"]
+
+    let data = [
+      {
+        name: "Rahul",
+        color: "red",
+        img: "https://cdn.pixabay.com/photo/2024/11/08/12/57/cat-9183327_1280.jpg",
+      },
+      {
+        name: "Riya",
+        color: "blue",
+        img: "https://cdn.pixabay.com/photo/2024/11/08/12/57/cat-9183327_1280.jpg",
+      },
+      {
+        name: "Rohan",
+        color: "green",
+        img: "https://cdn.pixabay.com/photo/2024/11/08/12/57/cat-9183327_1280.jpg",
+      },
+      {
+        name: "Priti",
+        color: "pinl",
+        img: "https://cdn.pixabay.com/photo/2024/11/08/12/57/cat-9183327_1280.jpg",
+      },
+      {
+        name: "Sameer",
+        color: "yellow",
+        img: "https://cdn.pixabay.com/photo/2024/11/08/12/57/cat-9183327_1280.jpg",
+      },
+    ];
+
+    for (let i = 0; i < data.length; i++) {
+      let h1 = document.createElement("h1");
+      h1.innerText = data[i].name;
+      h1.style.color = data[i].color;
+
+      let avt = document.createElement("img");
+      avt.src = data[i].img;
+
+      let div = document.createElement("div");
+
+      div.append(avt, h1);
+
+      main.append(div);
+    }
+  </script>
+</html>

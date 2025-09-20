@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input id="name" type="text" placeholder="enter your name">
+   <input id="pass" type="text" placeholder="enter your password">
+   <button onclick="loginfun()">click</button> 
+
+   <br><br>
+
+   <h1 id="head"></h1>
+</body>
+<script >
+  let name = document.getElementById("name")
+  let pass = document.getElementById("pass")
+  let head = document.getElementById("head")
+
+//   console.log(name,pass)
+// console.log(name.value)
+
+function loginfun(){
+    // console.log("hello")
+//   console.log(name.value)
+//   console.log(pass.value)
+
+head.innerText = name.value + " " + pass.value
+}
+</script>
+</html>
